@@ -7,6 +7,8 @@ import Update from './Components/Update';
 import { Routes, Route, Link } from 'react-router-dom';
 import { FaHome , FaList } from "react-icons/fa";
 import { FcAddDatabase } from "react-icons/fc";
+import Login from './Components/Login';
+import SignUp from './Components/SignUp';
 
 
 function App(){
@@ -27,6 +29,8 @@ function App(){
                 <Link className="nav-link active" aria-current="page" to={"/"}><FaHome/></Link>
                 <Link className="nav-link" to={"/"}><FaList/></Link>
                 <Link className="nav-link" to={"/add"}><FcAddDatabase/></Link>
+                <Link className="nav-link" to={"/login"}> Login</Link>
+                <Link className="nav-link" to={"/singup"}> Singup</Link>
 
               </div>
             </div>
@@ -37,6 +41,8 @@ function App(){
           <Route exact path='/' element={< List />}></Route>
           <Route exact path='/add' element={< Add />}></Route>
           <Route exact path='/update:id' element={< Update />}></Route>
+          <Route exact path='/login' element={< Login />}></Route>
+          <Route exact path='/singup' element={< SignUp />}></Route>
 
         </Routes>
 
